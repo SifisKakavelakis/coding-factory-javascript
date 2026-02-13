@@ -18,3 +18,8 @@ const deleteBackwards2 = (arr, value) => {
         }
     }
 }
+
+// new array
+const deleteImmu = (arr, value) => {
+    return arr.filter(x => x !== value);
+}
