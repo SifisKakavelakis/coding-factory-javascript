@@ -1,10 +1,10 @@
-const jsonStr = `{
+const jsonStr = ` {
     "id": 1,
     "firstname": "John",
     "lastname": "Smith",
     "age": 30,
     "isTeacher": false,
-    "hobbies": {"football", "music"},
+    "hobbies": ["football", "music"],
     "address": {
         "city": "Athens",
         "country": "Greece",
@@ -13,4 +13,4 @@ const jsonStr = `{
     "phoneNumber": null
 }`
 
-console.log(JSON.parse(jsonStr));   // deserialization
+console.log(JSON.parse(jsonStr)) // deserialization 
