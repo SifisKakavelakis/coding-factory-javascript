@@ -8,7 +8,8 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#btnReset').addEventListener('click', () =>
     onResetClicked())
     document.querySelector('#btnIncr').addEventListener('click', () =>
-    onIncreaseClicked())  
+    onIncreasedClicked())  
+    render()
 })
 
 // Controllers
@@ -30,14 +31,17 @@ function onIncreasedClicked() {
 // Model
 function decreaseCounter() {
     counter--;
+    render()
 }
 
-function resetCounterCounter() {
+function resetCounter() {
     counter = DEFAULT;
+    render()
 }
 
 function increaseCounter() {
     counter++;
+    render()
 }
 
 // View
@@ -49,5 +53,5 @@ function render() {
 
 function styleCounter(counterEL) {
     counterEL.classList.remove('color-green', 'color-red', 'color-black' )
-    counterEL.add(counter > 0 ? 'color-green' : counter < 0 ? 'color-red' : 'color-black')
+    counterEL.classList.add(counter > 0 ? 'color-green' : counter < 0 ? 'color-red' : 'color-black')
 }
