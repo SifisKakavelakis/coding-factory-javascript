@@ -29,7 +29,7 @@
             document.getElementById('responseText').textContent = `Error: ${error.message}`;
             console.error('Error creating post:', error.message);
 
-            document.getElementById('responseText').textContent = `Error: ${grLocalizations[response?.data?.errorCode]}`;
+            document.getElementById('responseText').textContent = `Error: ${grLocalizations[error.response?.data?.errorCode]}`;
             
         });
 
